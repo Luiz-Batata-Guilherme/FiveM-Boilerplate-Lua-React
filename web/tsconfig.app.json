@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -11,7 +11,7 @@
       "~/*": ["../../*"],
       "@common/*": ["../src/common/*"]
     },
-    "types": ["@types/node", "./src/nui.d.ts"],
+    "types": ["node", "./src/nui.d.ts"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -27,6 +27,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src", "./src/nui.d.ts"],
+  "include": ["./src", "./src/nui.d.ts", "./src/**/*.ts", "./src/**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

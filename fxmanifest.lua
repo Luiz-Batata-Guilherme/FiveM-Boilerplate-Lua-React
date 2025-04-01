@@ -8,7 +8,8 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
-ui_page 'dist/web/index.html'
+-- ui_page 'dist/web/index.html' -- For production
+ui_page 'http://localhost:5173/' -- For development
 
 files {
 	'locales/*.json',

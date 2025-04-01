@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { isEnvBrowser } from './utils/misc';
 import { useNuiEvent } from './hooks/useNuiEvent';
 import { fetchNui } from './utils/fetchNui';
-// import "./App.css"
 
 function App() {
   const [visible, setVisible] = useState(isEnvBrowser());
@@ -21,19 +20,19 @@ function App() {
     <>
       {visible && (
         <div className='h-screen flex flex-col items-center justify-center gap-2'>
-          <div className='bg-red-700 text-white p-4 rounded-xl'>
-            <h3>Tigrinho</h3>
-            <p>Count: {count}</p>
+          <div className='bg-slate-700 text-white p-4'>
+            <h3>Boilerplate FiveM Script Lua & React</h3>
+            <p>Contador: {count}</p>
 
             <div className='flex flex-row gap-2'>
-              <button className='px-2 py-1 bg-zinc-300 text-black rounded-xl' type='button' onClick={() => setCount((prev) => ++prev)}>
-                Count +
+              <button className='px-2 py-1 bg-zinc-400 text-black rounded-xl' type='button' onClick={() => setCount((prev) => ++prev)}>
+                Contador + 1
               </button>
-              <button className='px-2 py-1 bg-zinc-300 text-black rounded-xl' type='button' onClick={() => setCount((prev) => --prev)}>
-                Count -
+              <button className='px-2 py-1 bg-zinc-400 text-black rounded-xl' type='button' onClick={() => setCount((prev) => --prev)}>
+                Contador - 1
               </button>
-              <button className='px-2 py-1 bg-zinc-300 text-black rounded-xl' type='button' onClick={() => handleHideModal()}>
-                Exit
+              <button className='px-2 py-1 bg-zinc-400 text-black rounded-xl' type='button' onClick={() => handleHideModal()}>
+                Sair
               </button>
             </div>
           </div>
