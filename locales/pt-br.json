@@ -1,4 +1,3 @@
 {
-  "hello": "Olá ${world}!",
-  "world": "Mundo"
+  "openNuiHelp" : "Abrir ajuda"
 }
