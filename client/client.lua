@@ -7,3 +7,7 @@ end)
 RegisterNetEvent('boilerplate:client:CloseUI', function()
 	ToggleUI(false)
 end)
+
+RegisterNUICallback("hideUI", function()
+	ToggleUI(false)
+end)
