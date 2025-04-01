@@ -1,4 +1,4 @@
-# Boilerplate Resource for FiveM
+# INGLES VERSION - Boilerplate Resource for FiveM
 
 This project serves as a boilerplate for creating resources for a FiveM server. It provides a basic structure and setup to help you get started quickly.
 
@@ -111,7 +111,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-# Recurso Boilerplate para FiveM
+# VERSAO EM PORTUGUES - Recurso Boilerplate para FiveM
 
 Este projeto serve como um modelo para criar recursos para um servidor FiveM. Ele fornece uma estrutura básica e configuração para ajudá-lo a começar rapidamente.
 
