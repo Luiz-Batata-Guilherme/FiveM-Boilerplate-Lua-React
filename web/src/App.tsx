@@ -1,28 +1,45 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { isEnvBrowser } from './utils/misc';
+import { useNuiEvent } from './hooks/useNuiEvent';
+import { fetchNui } from './utils/fetchNui';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [visible, setVisible] = useState(isEnvBrowser());
+  const [count, setCount] = useState(0);
+
+  useNuiEvent('setVisible', (data: { visible?: boolean }) => {
+    setVisible(data.visible || false);
+  });
+
+  function handleHideModal() {
+    setVisible(false);
+    void fetchNui('exit');
+  }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">React Boilerplate QBox</h1>
+    <>
+      {visible && (
+        <div className='h-screen flex flex-col items-center justify-center gap-2'>
+          <div className='bg-zinc-700 text-white p-4 rounded-xl'>
+            <h3>Modal</h3>
+            <p>Count: {count}</p>
+
+            <div className='flex flex-row gap-2'>
+              <button className='px-2 py-1 bg-zinc-300 text-black rounded-xl' type='button' onClick={() => setCount((prev) => ++prev)}>
+                Incremetar
+              </button>
+              <button className='px-2 py-1 bg-zinc-300 text-black rounded-xl' type='button' onClick={() => setCount((prev) => --prev)}>
+                Drecementar
+              </button>
+              <button className='px-2 py-1 bg-zinc-300 text-black rounded-xl' type='button' onClick={() => handleHideModal()}>
+                Hide modal
+              </button>
+            </div>
+          </div>
         </div>
-      </header>
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={() => setCount((count) => count + 1)}
-          >
-            Counter: {count}
-          </button>
-        </div>
-      </main>
-    </div>
-  )
+      )}
+    </>
+  );
 }
 
-export default App
-
+export default App;
