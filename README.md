@@ -86,7 +86,7 @@ The project includes a web interface located in the `./web` folder. Follow the s
    pnpm run dev
    ```
 
-2. Open your browser and navigate to the URL displayed in the terminal (usually `http://localhost:3000`).
+2. Open your browser and navigate to the URL displayed in the terminal (usually `http://localhost:5173`).
 
 ### Building for Production
 
@@ -199,7 +199,7 @@ O projeto inclui uma interface web localizada na pasta `./web`. Siga os passos a
    pnpm run dev
    ```
 
-2. Abra o navegador e acesse o URL exibido no terminal (geralmente `http://localhost:3000`).
+2. Abra o navegador e acesse o URL exibido no terminal (geralmente `http://localhost:5173`).
 
 ### Construindo para Produção
 
